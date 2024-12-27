@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Network Concepts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            margin-top: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        code {
+            background-color: #f7f7f7;
+            padding: 2px 5px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Deliveroo Workplace Platforms Engineer Role Q & A's</h1>
+
+    <h1>Computer Network Concepts</h1>
+
+    <h2>1. What is Computer Network?</h2>
+    <p>A <strong>computer network</strong> is a system of interconnected devices (computers, servers, routers, etc.) that can communicate with each other and share resources like files, printers, and internet connections. Networks can be local (Local Area Networks - LAN) or wide (Wide Area Networks - WAN), and can operate through wired or wireless technologies.</p>
+
+    <h2>2. Difference Between Router and Switch</h2>
+    <ul>
+        <li><strong>Router:</strong> A router is a device that connects multiple networks (e.g., LAN to WAN) and directs data packets between them. It operates at Layer 3 (Network layer) of the OSI model and makes forwarding decisions based on IP addresses.</li>
+        <li><strong>Switch:</strong> A switch is a device that connects devices within a single network (LAN) and forwards data based on MAC addresses. It operates at Layer 2 (Data Link layer) of the OSI model.</li>
+    </ul>
+
+    <h2>3. What is a Broadcast Domain?</h2>
+    <p>A <strong>broadcast domain</strong> is a logical division of a computer network in which all devices can receive broadcast messages from any other device in the same domain. Devices in different broadcast domains, such as those separated by routers, cannot directly receive each other's broadcast messages.</p>
+
+    <h2>4. OSI Model with Complete Details and Protocols on Each Layer</h2>
+    <h3>OSI Model Layers:</h3>
+    <ol>
+        <li><strong>Physical Layer:</strong> Deals with physical transmission of data (cables, signals). Protocols: Ethernet, DSL, USB.</li>
+        <li><strong>Data Link Layer:</strong> Manages node-to-node data transfer and error correction. Protocols: Ethernet, PPP, MAC addresses.</li>
+        <li><strong>Network Layer:</strong> Handles routing and addressing. Protocols: IP, ICMP, ARP.</li>
+        <li><strong>Transport Layer:</strong> Ensures reliable data transfer between devices. Protocols: TCP, UDP.</li>
+        <li><strong>Session Layer:</strong> Manages sessions between applications. Protocols: NetBIOS, RPC.</li>
+        <li><strong>Presentation Layer:</strong> Translates data formats for the application. Protocols: JPEG, ASCII, TLS/SSL.</li>
+        <li><strong>Application Layer:</strong> Provides network services to end-user applications. Protocols: HTTP, FTP, DNS, SMTP.</li>
+    </ol>
+
+    <h2>5. DHCP DORA Process</h2>
+    <p>The <strong>DORA</strong> process is the sequence of events in Dynamic Host Configuration Protocol (DHCP) where:</p>
+    <ul>
+        <li><strong>D</strong> - Discover: The client sends a DHCPDISCOVER message to locate a DHCP server.</li>
+        <li><strong>O</strong> - Offer: The DHCP server responds with a DHCPOFFER message that includes an IP address.</li>
+        <li><strong>R</strong> - Request: The client sends a DHCPREQUEST message to request the offered IP address.</li>
+        <li><strong>A</strong> - Acknowledge: The server sends a DHCPACK message, confirming the lease of the IP address.</li>
+    </ul>
+
+    <h2>6. DNS – Detailed Explanation</h2>
+    <p><strong>DNS (Domain Name System)</strong> is a hierarchical system that translates human-readable domain names (e.g., www.google.com) into IP addresses (e.g., 172.217.14.196). It consists of various components such as DNS servers, zones, and records. The DNS query process typically involves a recursive resolver and authoritative DNS servers that work together to resolve domain names into IP addresses.</p>
+
+    <h2>7. TCP/UDP and Why?</h2>
+    <ul>
+        <li><strong>TCP (Transmission Control Protocol):</strong> A connection-oriented protocol that ensures reliable, ordered, and error-checked delivery of data. It is used for applications that require high reliability (e.g., HTTP, FTP, email).</li>
+        <li><strong>UDP (User Datagram Protocol):</strong> A connectionless protocol that allows fast, best-effort data transfer without guarantees of reliability or order. It is used in applications where speed is critical (e.g., video streaming, VoIP).</li>
+    </ul>
+
+    <h2>8. Subnetting</h2>
+    <p><strong>Subnetting</strong> is the practice of dividing a large IP network into smaller, more manageable subnets. This improves network efficiency and security. By modifying the subnet mask, a network administrator can define the size of subnets and allocate IP addresses appropriately.</p>
+
+    <h2>9. MSS/MTU</h2>
+    <ul>
+        <li><strong>MTU (Maximum Transmission Unit):</strong> The largest size of a data packet that can be transmitted over a network.</li>
+        <li><strong>MSS (Maximum Segment Size):</strong> The largest amount of data that can be sent in a single TCP segment, excluding headers. MSS is usually determined by the MTU of the network minus the TCP and IP headers.</li>
+    </ul>
+
+    <h2>10. Complete Flow When You Trigger amazon.com</h2>
+    <p>When you type "amazon.com" into your browser, the following flow occurs:</p>
+    <ul>
+        <li>The browser sends a DNS query to resolve the domain name into an IP address.</li>
+        <li>The browser opens a TCP connection to the resolved IP address using port 80 (HTTP) or 443 (HTTPS).</li>
+        <li>The browser sends an HTTP/HTTPS request to the web server (Amazon's server).</li>
+        <li>The server processes the request and sends back the requested webpage data (HTML, CSS, JavaScript).</li>
+        <li>The browser renders the page, displaying it to the user.</li>
+    </ul>
+
+    <h2>11. TCP and SSL Handshake</h2>
+    <p>The <strong>TCP handshake</strong> is the process of establishing a connection between the client and the server:</p>
+    <ul>
+        <li><strong>Step 1:</strong> SYN: The client sends a SYN (synchronize) packet to the server to initiate the connection.</li>
+        <li><strong>Step 2:</strong> SYN-ACK: The server responds with a SYN-ACK (synchronize-acknowledgment) packet.</li>
+        <li><strong>Step 3:</strong> ACK: The client sends an ACK (acknowledgment) packet, completing the handshake.</li>
+    </ul>
+    <p>The <strong>SSL handshake</strong> occurs after the TCP handshake and is responsible for securing the communication by establishing encryption parameters:</p>
+    <ul>
+        <li>The client sends a "ClientHello" message, proposing encryption algorithms.</li>
+        <li>The server responds with a "ServerHello" message and sends its SSL certificate for verification.</li>
+        <li>The client verifies the certificate and generates a pre-master secret to establish a secure session.</li>
+    </ul>
+
+    <h2>12. Flow/Error Control</h2>
+    <p><strong>Flow control</strong> ensures that data is transmitted at a rate that the receiver can handle without overwhelming it. It typically uses sliding window techniques in protocols like TCP.</p>
+    <p><strong>Error control</strong> ensures that errors in transmission are detected and corrected. Techniques like checksums, retransmissions, and acknowledgment (ACK) are used for error control in protocols like TCP.</p>
+
+    <h2>13. What is a Firewall, Why Do You Need It?</h2>
+    <p>A <strong>firewall</strong> is a network security system that monitors and controls incoming and outgoing traffic based on predefined security rules. It helps prevent unauthorized access to or from private networks and is essential for protecting against cyberattacks, malware, and unauthorized intrusions.</p>
+
+    <h2>14. What is APIPA?</h2>
+    <p><strong>APIPA (Automatic Private IP Addressing)</strong> is a feature in Windows that automatically assigns a private IP address (usually in the range of 169.254.x.x) to a device when it cannot obtain an IP address from a DHCP server.</p>
+
+    <h2>15. Will My Computer Get the Same IP Address Allocated Every Time?</h2>
+    <p>If you are using <strong>DHCP</strong> (Dynamic Host Configuration Protocol), your computer may receive a different IP address each time it connects to the network, depending on the DHCP lease. However, if the device is assigned a <strong>static IP</strong>, it will always get the same IP address.</p>
+
+    <h2>16. DNS Query Process</h2>
+    <p>The <strong>DNS query process</strong> occurs when you enter a domain name (e.g., www.amazon.com) into your browser. Here's a breakdown of the process:</p>
+    <ul>
+        <li><strong>Step 1:</strong> The browser checks the local DNS cache to see if it already knows the IP address for the domain.</li>
+        <li><strong>Step 2:</strong> If not found, the browser sends a DNS query to the DNS resolver (usually provided by your ISP).</li>
+        <li><strong>Step 3:</strong> The resolver checks if it has the IP address cached; if not, it forwards the query to a root DNS server.</li>
+        <li><strong>Step 4:</strong> The root DNS server responds with the IP address of a Top-Level Domain (TLD) DNS server (e.g., .com).</li>
+        <li><strong>Step 5:</strong> The resolver sends the query to the TLD server, which responds with the authoritative DNS server for the domain.</li>
+        <li><strong>Step 6:</strong> The resolver then queries the authoritative DNS server for the domain (e.g., amazon.com), and the server responds with the IP address of the requested domain.</li>
+        <li><strong>Step 7:</strong> The resolver sends the IP address back to the browser, which then uses it to make a connection to the web server and load the page.</li>
+    </ul>
+
+    <h2>17. What Happens if We Type www.amazon.com?</h2>
+    <p>When you type <strong>www.amazon.com</strong> in the browser, the following series of events occurs:</p>
+    <ul>
+        <li><strong>DNS Lookup:</strong> The browser initiates the DNS query process to resolve the domain name to an IP address, as explained earlier.</li>
+        <li><strong>TCP Connection:</strong> Once the IP address is resolved, the browser initiates a TCP handshake to establish a connection to the Amazon web server.</li>
+        <li><strong>HTTP Request:</strong> The browser sends an HTTP request to the server to fetch the webpage.</li>
+        <li><strong>SSL/TLS Handshake:</strong> If HTTPS is used, an SSL/TLS handshake is performed to secure the communication between the client and server.</li>
+        <li><strong>Web Page Response:</strong> The web server processes the request and sends back the necessary HTML, CSS, JavaScript, and images to the browser.</li>
+        <li><strong>Rendering:</strong> The browser renders the page for the user to view.</li>
+    </ul>
+
+    <h2>18. What Are Ports and Port Numbers?</h2>
+    <p><strong>Ports</strong> are logical endpoints in a network where communication occurs between two devices. They are used by protocols like TCP and UDP to identify specific services or applications running on a device. Each port is identified by a <strong>port number</strong>, which is a 16-bit value (ranging from 0 to 65535). Some common well-known port numbers include:</p>
+    <ul>
+        <li>80 - HTTP</li>
+        <li>443 - HTTPS</li>
+        <li>25 - SMTP</li>
+        <li>53 - DNS</li>
+    </ul>
+
+    <h2>19. Do Different Tabs Making Queries in the Browser Use Different Port Numbers?</h2>
+    <p>No, all tabs in a browser typically use the same port number for communication, which is usually port 80 for HTTP or port 443 for HTTPS. However, they may be differentiated by different IP addresses or connections to the same web server with different resources. Each new request made by the browser to the same domain uses the same port for communication, but different sessions can be handled with separate connections.</p>
+
+    <h2>20. TCP Handshake in Detail</h2>
+    <p>The <strong>TCP handshake</strong> (also called the three-way handshake) is the process used to establish a connection between a client and a server:</p>
+    <ol>
+        <li><strong>Step 1: SYN</strong> - The client sends a SYN (synchronize) message to the server with a sequence number, indicating its desire to establish a connection.</li>
+        <li><strong>Step 2: SYN-ACK</strong> - The server responds with a SYN-ACK message, acknowledging the client's SYN request and sending its own sequence number.</li>
+        <li><strong>Step 3: ACK</strong> - The client sends an ACK message to the server, acknowledging the server's SYN-ACK message. This completes the handshake, and data transmission can begin.</li>
+    </ol>
+
+    <h2>21. How Do PING and TRACERT Commands Work?</h2>
+    <p><strong>Ping</strong> is a network diagnostic tool used to check the availability and round-trip time of a remote host by sending ICMP Echo Request packets and receiving ICMP Echo Replies. The time it takes for the request to travel to the host and back is displayed.</p>
+    <p><strong>Traceroute (tracert)</strong> traces the route that packets take to reach a destination host. It sends multiple ICMP Echo Request packets with incrementing TTL (Time to Live) values, recording the IP addresses of each router along the path until the destination is reached.</p>
+
+    <h2>22. Problem on IP Addressing at the Sender, Gateway, and Destination</h2>
+    <p>If there is an IP addressing issue, the flow of data between sender, gateway, and destination will be interrupted. Common problems include:</p>
+    <ul>
+        <li><strong>Incorrect IP address:</strong> If the sender or destination has an incorrect IP address, the packet cannot be routed to the correct host.</li>
+        <li><strong>Incorrect Gateway:</strong> If the sender's default gateway is incorrect, it won't know how to forward packets to the destination outside of its local network.</li>
+        <li><strong>Routing Issues:</strong> If there are misconfigured routes or unreachable gateways, data cannot flow to the destination.</li>
+    </ul>
+
+    <h2>23. Detail Discussion on IPv4 and IPv6</h2>
+    <ul>
+        <li><strong>IPv4:</strong> IPv4 (Internet Protocol version 4) is the fourth version of the IP protocol and uses a 32-bit address format (e.g., 192.168.1.1). IPv4 supports around 4.3 billion unique IP addresses.</li>
+        <li><strong>IPv6:</strong> IPv6 (Internet Protocol version 6) is the successor to IPv4 and uses a 128-bit address format (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334), supporting a vastly larger number of unique addresses. IPv6 also improves upon IPv4 by providing features like auto-configuration and better security.</li>
+    </ul>
+
+    <h2>24. How Do We Check IP Address, Gateway, and DNS Server Addresses of Our Device?</h2>
+    <p>On most devices, you can check your IP address, default gateway, and DNS server addresses using the following commands:</p>
+    <ul>
+        <li><strong>Windows:</strong> Use the <code>ipconfig</code> command in Command Prompt.</li>
+        <li><strong>Linux/MacOS:</strong> Use the <code>ifconfig</code> (or <code>ip addr show</code>) command in the terminal.</li>
+    </ul>
+
+    <h2>25. How Does HTTPS Secure Our Connection?</h2>
+    <p><strong>HTTPS</strong> (Hypertext Transfer Protocol Secure) uses SSL/TLS protocols to encrypt communication between the client and server, ensuring that sensitive data (e.g., passwords, credit card information) is transmitted securely. It also verifies the identity of the server, preventing man-in-the-middle attacks.</p>
+
+    <h2>26. Know About Header (TCP, IP, etc.)</h2>
+    <p><strong>Headers</strong> are sections of metadata in data packets that provide important information about the packet, such as source and destination addresses, protocol used, and sequence numbers:</p>
+    <ul>
+        <li><strong>IP Header:</strong> Contains the source and destination IP addresses, version of IP (IPv4 or IPv6), TTL, and more.</li>
+        <li><strong>TCP Header:</strong> Includes source and destination port numbers, sequence and acknowledgment numbers, flags (SYN, ACK), window size, and checksum.</li>
+    </ul>
+
+    <h2>27. Linux Command (ping, traceroute, dig, curl, mpstat, etc.)</h2>
+    <ul>
+        <li><strong>ping:</strong> Sends ICMP Echo Requests to check connectivity to a remote host and measure round-trip time.</li>
+        <li><strong>traceroute:</strong> Traces the path of packets to a destination host, showing all intermediate routers along the way.</li>
+        <li><strong>dig:</strong> A DNS query tool used to retrieve information from DNS servers, including IP addresses and other records for a domain.</li>
+        <li><strong>curl:</strong> A command-line tool used to transfer data from or to a server using various protocols (HTTP, FTP, etc.). It is commonly used to test HTTP responses and interact with REST APIs.</li>
+        <li><strong>mpstat:</strong> A tool used to display CPU utilization statistics for each processor (CPU) on a system. It helps in monitoring performance and diagnosing bottlenecks.</li>
+    </ul>
+
+    <h2>28. What is SSL? Explain About Digital Certificates and TLS Handshake.</h2>
+    <p><strong>SSL (Secure Sockets Layer)</strong> is a cryptographic protocol designed to provide secure communication over a computer network. It encrypts the data transferred between a web server and a browser to protect sensitive information such as login credentials and credit card numbers.</p>
+    <p><strong>Digital Certificates</strong> are used to prove the authenticity of a website or a server during an SSL/TLS handshake. They are issued by trusted Certificate Authorities (CAs) and contain the server’s public key and information about its identity.</p>
+    <p><strong>TLS Handshake</strong> is the process that establishes a secure communication channel between the client and the server. It involves the following steps:</p>
+    <ul>
+        <li>The client sends a "ClientHello" message, proposing encryption algorithms.</li>
+        <li>The server responds with a "ServerHello" message, choosing the encryption method and sending its SSL certificate.</li>
+        <li>The client verifies the server's certificate and generates a pre-master secret.</li>
+        <li>Both the client and the server generate session keys from the pre-master secret, which are used to encrypt subsequent communication.</li>
+        <li>The secure communication channel is now established.</li>
+    </ul>
+
+    <h2>29. What Are a Few Methods of HTTP, What is HTTPS, Is the Port Number Different for HTTPS, How Is SSL Related to HTTPS?</h2>
+    <p><strong>HTTP Methods</strong> are standard request types used in HTTP communication, including:</p>
+    <ul>
+        <li><strong>GET:</strong> Retrieves data from the server.</li>
+        <li><strong>POST:</strong> Sends data to the server to create or update a resource.</li>
+        <li><strong>PUT:</strong> Replaces an existing resource on the server with the provided data.</li>
+        <li><strong>DELETE:</strong> Deletes a specified resource from the server.</li>
+    </ul>
+    <p><strong>HTTPS</strong> (Hypertext Transfer Protocol Secure) is the secure version of HTTP, where all communication is encrypted using SSL/TLS protocols. The primary difference from HTTP is that HTTPS ensures secure data transmission over the network, preventing eavesdropping and tampering.</p>
+    <p><strong>Port Number:</strong> By default, HTTP operates on port 80, while HTTPS operates on port 443.</p>
+    <p><strong>SSL and HTTPS:</strong> SSL (or TLS) is the protocol used to secure HTTP traffic. HTTPS relies on SSL/TLS to encrypt data, ensuring that sensitive information remains confidential during transmission.</p>
+
+    <h2>30. What Methods Are Available to Us in Flow Control and Error Detection/Correction?</h2>
+    <p><strong>Flow Control</strong> methods are used to prevent network congestion and ensure that the sender does not overwhelm the receiver. Some common flow control techniques include:</p>
+    <ul>
+        <li><strong>Window-based flow control:</strong> Used by protocols like TCP, where the sender can send multiple packets up to the size of the "window" without waiting for an acknowledgment.</li>
+        <li><strong>Credit-based flow control:</strong> The receiver grants the sender permission to transmit data based on available buffer space.</li>
+    </ul>
+    <p><strong>Error Detection/Correction</strong> ensures that transmitted data is accurate. Common methods include:</p>
+    <ul>
+        <li><strong>Checksums:</strong> Used to detect errors in transmitted data by comparing the checksum value calculated at the sender and receiver.</li>
+        <li><strong>Parity Bits:</strong> Adds an extra bit to data to detect errors in transmission.</li>
+        <li><strong>Cyclic Redundancy Check (CRC):</strong> A method used for error detection, commonly used in Ethernet frames.</li>
+        <li><strong>Retransmission:</strong> A process where lost or corrupted data packets are retransmitted until successful delivery is confirmed.</li>
+    </ul>
+
+    <h2>31. What Is Public IP? How Is It Different from Private IP? Can I Connect to the Internet Using Private IP? What Is NAT?</h2>
+    <ul>
+        <li><strong>Public IP:</strong> A public IP address is a unique address assigned to a device on the internet, allowing it to be directly reachable from anywhere on the network.</li>
+        <li><strong>Private IP:</strong> A private IP address is used within a local network and is not routable over the internet. Private IPs are defined by specific ranges (e.g., 192.168.x.x, 10.x.x.x).</li>
+        <li><strong>Can I Connect to the Internet Using Private IP?</strong> No, private IPs cannot communicate directly with the internet. However, devices using private IPs can access the internet through Network Address Translation (NAT).</li>
+        <li><strong>NAT:</strong> NAT (Network Address Translation) is a method used by routers to allow multiple devices with private IPs to share a single public IP address when accessing the internet. It translates private IP addresses to a public IP address for outgoing traffic and vice versa for incoming traffic.</li>
+    </ul>
+
+    <h2>32. System Automation – Cron, Batch Jobs, Windows Startup Tasks</h2>
+    <p><strong>Cron</strong> is a time-based job scheduler in Unix-like systems that allows scheduled tasks (or cron jobs) to be executed at specified intervals. Common uses include running backup scripts, sending emails, or cleaning temporary files.</p>
+    <p><strong>Batch Jobs</strong> are scripts or programs that can be executed automatically on a set schedule in Windows. They are often used for system maintenance or automating repetitive tasks.</p>
+    <p><strong>Windows Startup Tasks</strong> are programs or scripts configured to run automatically when Windows starts. These tasks can be configured via the Task Scheduler or placed in the Startup folder.</p>
+
+    <h2>33. Firewall in Detail with All Types (Advantages/Disadvantages)</h2>
+    <p>A <strong>firewall</strong> is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules. It is used to protect networks and devices from unauthorized access and cyberattacks.</p>
+    <h3>Types of Firewalls:</h3>
+    <ul>
+        <li><strong>Packet Filtering Firewalls:</strong> Inspect packets at the network layer and allow or block traffic based on predefined rules.</li>
+        <li><strong>Stateful Inspection Firewalls:</strong> Track the state of active connections and make decisions based on the state of the connection.</li>
+        <li><strong>Proxy Firewalls:</strong> Act as intermediaries between users and services, filtering traffic and performing deep packet inspection.</li>
+        <li><strong>Next-Generation Firewalls (NGFW):</strong> Combine traditional firewall features with advanced capabilities like intrusion prevention and application awareness.</li>
+    </ul>
+    <h3>Advantages:</h3>
+    <ul>
+        <li>Helps protect against unauthorized access and cyberattacks.</li>
+        <li>Can block harmful content, malware, and viruses.</li>
+        <li>Provides network monitoring and logging for auditing purposes.</li>
+    </ul>
+    <h3>Disadvantages:</h3>
+    <ul>
+        <li>Can introduce latency or performance issues if not configured correctly.</li>
+        <li>May block legitimate traffic if overly restrictive rules are applied.</li>
+    </ul>
+    <h2>34. Differentiate OSI Reference Model with TCP/IP Reference Model</h2>
+    <h3>OSI Model:</h3>
+    <ul>
+        <li>It has 7 layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application.</li>
+        <li>Designed by ISO (International Organization for Standardization) to standardize network protocols.</li>
+        <li>Each layer is responsible for specific networking tasks, such as physical transmission, routing, and data formatting.</li>
+        <li>It is a theoretical model used for understanding and designing network systems.</li>
+    </ul>
+    
+    <h3>TCP/IP Model:</h3>
+    <ul>
+        <li>The TCP/IP model has 4 layers: Link, Internet, Transport, and Application.</li>
+        <li>It was developed by the Department of Defense (DoD) for the ARPANET (precursor to the internet).</li>
+        <li>It is more practical and widely used compared to the OSI model, especially in the design and implementation of networking protocols.</li>
+        <li>The TCP/IP model focuses on the internet protocols and their application for communication over the internet.</li>
+    </ul>
+
+    <h3>Comparison:</h3>
+    <table border="1">
+        <tr>
+            <th>Layer in OSI Model</th>
+            <th>Layer in TCP/IP Model</th>
+            <th>Responsibilities</th>
+        </tr>
+        <tr>
+            <td>Physical</td>
+            <td>Link</td>
+            <td>Deals with hardware transmission and physical media (cables, switches).</td>
+        </tr>
+        <tr>
+            <td>Data Link</td>
+            <td>Link</td>
+            <td>Defines how data is formatted and transmitted across the network.</td>
+        </tr>
+        <tr>
+            <td>Network</td>
+            <td>Internet</td>
+            <td>Responsible for routing packets between different networks (IP addressing).</td>
+        </tr>
+        <tr>
+            <td>Transport</td>
+            <td>Transport</td>
+            <td>Ensures end-to-end communication (TCP/UDP protocols, flow control, error recovery).</td>
+        </tr>
+        <tr>
+            <td>Session</td>
+            <td>Application</td>
+            <td>Manages sessions between applications (establishes, maintains, and terminates connections).</td>
+        </tr>
+        <tr>
+            <td>Presentation</td>
+            <td>Application</td>
+            <td>Handles data translation, encryption, and compression (e.g., SSL, file formats).</td>
+        </tr>
+        <tr>
+            <td>Application</td>
+            <td>Application</td>
+            <td>Deals with high-level protocols like HTTP, FTP, DNS, etc. that facilitate user interaction.</td>
+        </tr>
+    </table>
+
+    <p><strong>Summary of Differences:</strong></p>
+    <ul>
+        <li>The OSI model is a more detailed, theoretical framework with seven layers, while the TCP/IP model is simpler with four layers.</li>
+        <li>The OSI model includes layers for session management and data presentation, which are combined into the application layer in TCP/IP.</li>
+        <li>The OSI model is used for designing and understanding networks, whereas the TCP/IP model is more practical and widely implemented in real-world networking.</li>
+    </ul>
+    <a href="./Operating_systems.html"><button>Click here for OS Technical Questions</button></a>   
+    <a href="./google_workspace.html"><button>Click here for Google Workspace Questions</button></a>
+</body>
+</html>
