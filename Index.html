@@ -55,6 +55,43 @@
         <li><strong>Retrieval via POP/IMAP:</strong> The recipient's email client uses either POP (Post Office Protocol)
             or IMAP (Internet Message Access Protocol) to fetch the email from the server.</li>
     </ul>
+    
+    <h2>OSI Model and Email Sending Process</h2>
+
+    <h3>Application Layer (Layer 7):</h3>
+    <p>
+        This is where the email client (e.g., Outlook, Gmail) operates. The user composes the email, and the application prepares it for sending. Protocols like SMTP (for sending) and IMAP/POP3 (for receiving) function at this layer.
+    </p>
+
+    <h3>Presentation Layer (Layer 6):</h3>
+    <p>
+        This layer formats the data for the application layer. In the context of email, it may involve encoding the email content (e.g., converting text to a suitable format like UTF-8) and ensuring that attachments are properly encoded (e.g., Base64 encoding).
+    </p>
+
+    <h3>Session Layer (Layer 5):</h3>
+    <p>
+        This layer establishes, manages, and terminates connections between applications. When you send an email, a session is created between your email client and the SMTP server to facilitate the communication.
+    </p>
+
+    <h3>Transport Layer (Layer 4):</h3>
+    <p>
+        This layer is responsible for end-to-end communication and error recovery. The Transmission Control Protocol (TCP) is commonly used here to ensure that the email data is sent reliably. It manages the segmentation of the email into packets and ensures they are delivered in the correct order.
+    </p>
+
+    <h3>Network Layer (Layer 3):</h3>
+    <p>
+        This layer handles the routing of packets across the network. The Internet Protocol (IP) operates at this layer, determining the best path for the email packets to travel from the sender's SMTP server to the recipient's mail server.
+    </p>
+
+    <h3>Data Link Layer (Layer 2):</h3>
+    <p>
+        This layer is responsible for node-to-node data transfer and error detection/correction. It deals with the physical addressing (MAC addresses) and the framing of packets for transmission over the physical medium (e.g., Ethernet, Wi-Fi).
+    </p>
+
+    <h3>Physical Layer (Layer 1):</h3>
+    <p>
+        This is the lowest layer, which involves the actual physical connection between devices. It includes the hardware technologies (cables, switches, etc.) that transmit the electrical or optical signals carrying the email data.
+    </p>
 
     <h2>2. What is SPF, DKIM, DMARC? How Does Email Authentication Work?</h2>
     <p><strong>SPF</strong> (Sender Policy Framework) is a system that prevents email spoofing by allowing domain owners
