@@ -366,6 +366,53 @@
         <li><strong>Data Loss Prevention (DLP):</strong> Scanning outbound emails for sensitive data to prevent
             accidental or malicious leaks.</li>
     </ul>
+    <h2>27. Email Encryption</h2>
+<p>Email encryption is vital for safeguarding the confidentiality and integrity of email communications.</p>
+
+<h3>Key Encryption Technologies:</h3>
+<ul>
+  <li>
+    <strong>TLS (Transport Layer Security):</strong>
+    <ul>
+      <li>TLS secures the communication channel between email servers, protecting email content during transit.</li>
+      <li>It establishes secure connections between email clients and servers, and between email servers themselves.</li>
+      <li>TLS is a widely adopted standard, serving as a fundamental level of email security.</li>
+      <li>It encrypts the communication channel between the mail servers, and not the email itself.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>S/MIME (Secure/Multipurpose Internet Mail Extensions):</strong>
+    <ul>
+      <li>S/MIME encrypts the email message itself, including the body and attachments.</li>
+      <li>It employs public-key cryptography, utilizing public and private key pairs for each user.</li>
+      <li>S/MIME provides end-to-end encryption, ensuring only the intended recipient can decrypt the email.</li>
+      <li>It also provides digital signatures, verifying sender identity and ensuring message integrity.</li>
+    </ul>
+  </li>
+  <li>
+    <strong>PGP (Pretty Good Privacy):</strong>
+    <ul>
+      <li>Similar to S/MIME, PGP uses public-key cryptography for end-to-end email encryption and digital signatures.</li>
+      <li>It's another prevalent standard for secure email communication.</li>
+      <li>PGP and S/MIME share similar functionalities, with the choice often dependent on user preference or organizational standards.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>28. Issues with TLS Encryption:</h2>
+<ul>
+  <li>
+    <strong>"In-Transit" Vulnerabilities:</strong>
+    <ul>
+      <li>TLS encrypts the connection between email servers, but it doesn't guarantee full end-to-end encryption of the email itself.</li>
+      <li>If an email traverses a server lacking TLS support or with misconfigurations, the message might be transmitted in plain text.</li>
+      <li>This exposes the email to potential interception at those unprotected hops.</li>
+      <li>Therefore, while connections between a client and server, and between properly configured mail servers are secure, there is a risk of unencrypted transmission between mail servers that do not support TLS.</li>
+      <li>This highlights the importance of S/MIME and PGP, which encrypt the message itself, rather than just the transmission channel.</li>
+      <li>In a simple analogy, TLS secures the "pipe," while S/MIME and PGP secure the "letter" inside the pipe.</li>
+    </ul>
+  </li>
+</ul>
     <a href="./Networking.html"><button>Click here for Networking Technical Questions</button></a>
     <a href="./Operating_systems.html"><button>Click here for OS Technical Questions</button></a>
 </body>
